@@ -23,7 +23,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={dark ? "라이트 모드로 전환" : "다크 모드로 전환"}
-      className="rounded-full border border-gray-300 p-2 text-lg leading-none transition hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800"
+      className="glass link-card focus-ring flex h-11 w-11 items-center justify-center rounded-full text-lg leading-none"
     >
       {/* 하이드레이션 전에는 아이콘 자리만 확보 */}
       <span className="inline-block h-5 w-5">{dark === null ? "" : dark ? "☀️" : "🌙"}</span>

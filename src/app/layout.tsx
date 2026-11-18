@@ -20,8 +20,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="ko" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        {/* Pretendard (한글·영문) — 실패 시 시스템 sans-serif로 대체 */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
       </head>
-      <body className="bg-gray-50 text-gray-900 antialiased transition-colors dark:bg-gray-900 dark:text-gray-100">
+      <body>
         {children}
       </body>
     </html>
